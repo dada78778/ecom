@@ -1,5 +1,5 @@
-import 'package:ecomapp/cart.page.dart';
-import 'package:ecomapp/product.info.dart';
+import 'package:ecomapp/screens/cart.page.dart';
+import 'package:ecomapp/screens/product.info.dart';
 import 'package:flutter/material.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -169,9 +169,10 @@ class _DashboardPageState extends State<DashboardPage> {
                                     MaterialPageRoute(builder: (c)=>const CartPage()),
                                   );
                                 },
-                                  child: const Icon(Icons.add_circle_outline,color: Color(0xff5147a6),size: 30)),
+                                  child: const Icon(Icons.add_circle_outline,color: Color(0xff5147a6),size: 25)),
                             ],
-                          )
+                          ),
+                          SizedBox(height: height * .01),
                         ],
                       ),
                     )

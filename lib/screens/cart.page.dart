@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'select.address.dart';
+
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
 
@@ -14,6 +16,7 @@ class _CartPageState extends State<CartPage> {
   int increase1=1;
   bool _checkboxDone=false;
   bool _checkboxDone1=false;
+  bool _visivledata=false;
 
   @override
   Widget build(BuildContext context) {
@@ -264,9 +267,119 @@ class _CartPageState extends State<CartPage> {
                   ],
                 ),
               ),
+              SizedBox(height: height * .02,),
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    _visivledata=!_visivledata;
+                  });
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.add_circle_outline_rounded,color: Color(0xff0433BD)),
+                    SizedBox(width: width * .02),
+                    Text('Add Coupon Code',style: TextStyle(
+                      color: Color(0xff0433BD),fontSize: 16.0,fontWeight: FontWeight.bold,
+                    ),),
+                  ],
+                ),
+              ),
+              SizedBox(height: height * .02,),
+              Visibility(
+                visible: _visivledata,
+                  child: Container(
+                    padding: EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    width: width,
+                    child: Row(
+                      children: [
+                        SizedBox(width: width * .02),
+                        Expanded(
+                          flex: 3,
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "Coupon Code...",
+                              ),
+                            )),
+                        Expanded(
+                          flex: 1,
+                            child: Container(
+                              alignment: Alignment.center,
+                              height: height * .04,
+                              decoration: BoxDecoration(
+                                color: Color(0xff0dc143),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                                child: Text('Apply',textAlign: TextAlign.center,style: TextStyle(
+                                  color: Colors.white,fontWeight: FontWeight.bold,
+                                ),))),
+                      ],
+                    )
+                  )
+              )
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Container(
+        padding: const EdgeInsets.all(10),
+        height: height * .15,
+        decoration: const BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(13),
+              topRight: Radius.circular(13),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black,
+                spreadRadius: 1,
+                blurRadius: 4,
+              )
+            ]
+        ),
+        child: Column(
+          children: [
+            SizedBox(height: height * .01),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                const Text("Total: ",style: TextStyle(
+                  color: Color(0xff5147a6), fontSize: 18.0,fontWeight: FontWeight.bold,
+                )),
+                const Text("\$ 120",style: TextStyle(
+                  color: Color(0xff5147a6), fontSize: 18.0,fontWeight: FontWeight.bold,
+                )),
+              ],
+            ),
+            SizedBox(height: height * .014),
+            InkWell(
+              onTap: (){
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (c)=>CheckOutPage()),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.all(10),
+                alignment: Alignment.center,
+                width: width * .9,
+                decoration: BoxDecoration(
+                  color: Color(0xff5147a6),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text("Check Out",style: TextStyle(
+                  color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0,
+                ),),
+              ),
+            )
+          ],
+        )
       ),
     );
   }

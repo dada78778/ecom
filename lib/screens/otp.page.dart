@@ -1,4 +1,4 @@
-import 'package:ecomapp/login.dart';
+import 'package:ecomapp/screens/login.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -33,6 +33,13 @@ class OtpPage extends StatelessWidget {
               child: const Text("Enter OTP",style: TextStyle(
                 color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.bold,
               ),),
+            ),
+            SizedBox(height: height * .02),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: const Text("An 6 digit code gas been sent to \n+91 9090909090",style: TextStyle(
+                color: Colors.black,fontSize: 15.0,
+              )),
             ),
             SizedBox(height: height * .03),
             Pinput(

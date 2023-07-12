@@ -1,5 +1,5 @@
-import 'package:ecomapp/dashboard.page.dart';
-import 'package:ecomapp/register.page.dart';
+import 'package:ecomapp/screens/dashboard.page.dart';
+import 'package:ecomapp/screens/register.page.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
