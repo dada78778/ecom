@@ -21,6 +21,8 @@ class _PaymentPageState extends State<PaymentPage> {
       appBar: AppBar(
         elevation: 0.0,
         leading: InkWell(
+            splashFactory: NoSplash.splashFactory,
+            splashColor: Colors.transparent,
             onTap: (){
               Navigator.of(context).pop();
             },

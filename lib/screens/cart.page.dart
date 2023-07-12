@@ -30,6 +30,8 @@ class _CartPageState extends State<CartPage> {
           color: Color(0xff0433BD),
         ),),
         leading: InkWell(
+          splashFactory: NoSplash.splashFactory,
+            splashColor: Colors.transparent,
             onTap: (){
               Navigator.of(context).pop();
             },
@@ -86,7 +88,7 @@ class _CartPageState extends State<CartPage> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text('Product Title',style: TextStyle(
-                                          color: Color(0xff0433BD),fontSize: 17.0,
+                                          color: Color(0xff0433BD),fontSize: 15.0,fontWeight: FontWeight.bold,
                                         )),
                                         Icon(Icons.delete,color: Colors.red,size: 25),
                                       ],
@@ -195,7 +197,7 @@ class _CartPageState extends State<CartPage> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text('Product Title',style: TextStyle(
-                                          color: Color(0xff0433BD),fontSize: 17.0,
+                                          color: Color(0xff0433BD),fontSize: 15.0,fontWeight: FontWeight.bold,
                                         )),
                                         Icon(Icons.delete,color: Colors.red,size: 25),
                                       ],
@@ -269,6 +271,8 @@ class _CartPageState extends State<CartPage> {
               ),
               SizedBox(height: height * .02,),
               InkWell(
+                splashFactory: NoSplash.splashFactory,
+                splashColor: Colors.transparent,
                 onTap: (){
                   setState(() {
                     _visivledata=!_visivledata;

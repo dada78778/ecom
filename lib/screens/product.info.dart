@@ -21,6 +21,8 @@ class _ProductInfoState extends State<ProductInfo> {
       appBar: AppBar(
         elevation: 0.0,
         leading: InkWell(
+            splashFactory: NoSplash.splashFactory,
+            splashColor: Colors.transparent,
             onTap: (){
               Navigator.of(context).pop();
             },

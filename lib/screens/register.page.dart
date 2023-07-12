@@ -23,6 +23,8 @@ class _RegisterPageState extends State<RegisterPage> {
       appBar: AppBar(
         elevation: 0.0,
         leading: InkWell(
+            splashFactory: NoSplash.splashFactory,
+            splashColor: Colors.transparent,
           onTap: (){
             Navigator.of(context).pop();
           },
