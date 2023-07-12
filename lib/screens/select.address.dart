@@ -31,8 +31,8 @@ class _CheckOutPageState extends State<CheckOutPage> {
         backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        padding: EdgeInsets.all(15),
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.all(15),
         child: Column(
           children: [
             Container(
@@ -41,22 +41,22 @@ class _CheckOutPageState extends State<CheckOutPage> {
               width: width,
               height: height * .05,
               decoration: BoxDecoration(
-                color: Color(0xff5147a6),
+                color: const Color(0xff5147a6),
                 borderRadius: BorderRadius.circular(14),
               ),
-              child: Text('Add New',textAlign: TextAlign.center,style: TextStyle(
+              child: const Text('Add New',textAlign: TextAlign.center,style: TextStyle(
                color: Colors.white,fontWeight: FontWeight.bold,
               )),
             ),
             SizedBox(height: height * .03),
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(13),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xff5147a6).withOpacity(.2),
+                    color: const Color(0xff5147a6).withOpacity(.2),
                     spreadRadius: 1,
                     blurRadius: 15,
                   )
@@ -69,7 +69,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                 children: [
                   Radio(
                       value: 1,
-                      activeColor: Color(0xff5147a6),
+                      activeColor: const Color(0xff5147a6),
                       groupValue: _addressselect,
                       onChanged: (value){
                         setState(() {
@@ -81,13 +81,13 @@ class _CheckOutPageState extends State<CheckOutPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Ritik',style: TextStyle(
+                      const Text('Ritik',style: TextStyle(
                        fontSize: 15.0,fontWeight: FontWeight.bold,
                       )),
                       SizedBox(height: height * .004),
-                      Text('+91 9625309369'),
+                      const Text('+91 9625309369'),
                       SizedBox(height: height * .01),
-                      Text("1/11225 street No.13 subhash park shahadara Delhi 110032"),
+                      const Text("1/11225 street No.13 subhash park shahadara Delhi 110032"),
                     ],
                   )),
                 ],
@@ -95,13 +95,13 @@ class _CheckOutPageState extends State<CheckOutPage> {
             ),
             SizedBox(height: height * .03),
             Container(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(13),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xff5147a6).withOpacity(.2),
+                      color: const Color(0xff5147a6).withOpacity(.2),
                       spreadRadius: 1,
                       blurRadius: 15,
                     )
@@ -115,7 +115,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                   Radio(
                     value: 2,
                     groupValue: _addressselect,
-                    activeColor: Color(0xff5147a6),
+                    activeColor: const Color(0xff5147a6),
                     onChanged: (value){
                       setState(() {
                         _addressselect=value!;
@@ -126,13 +126,13 @@ class _CheckOutPageState extends State<CheckOutPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Neeraj',style: TextStyle(
+                      const Text('Neeraj',style: TextStyle(
                         fontSize: 15.0,fontWeight: FontWeight.bold,
                       )),
                       SizedBox(height: height * .004),
-                      Text('+91 9090909090'),
+                      const Text('+91 9090909090'),
                       SizedBox(height: height * .01),
-                      Text("1/11225 street No.13 Agra park shahadara Delhi 110032"),
+                      const Text("1/11225 street No.13 Agra park shahadara Delhi 110032"),
                     ],
                   )),
                 ],
@@ -144,7 +144,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
       bottomNavigationBar: InkWell(
         onTap: (){
           Navigator.of(context).push(
-            MaterialPageRoute(builder: (c)=>PaymentPage()),
+            MaterialPageRoute(builder: (c)=>const PaymentPage()),
           );
         },
         child: Container(
@@ -165,7 +165,7 @@ class _CheckOutPageState extends State<CheckOutPage> {
                 )
               ]
           ),
-          child: Text("Proceed To Pay",style: TextStyle(
+          child: const Text("Proceed To Pay",style: TextStyle(
             color: Colors.white,fontSize: 18.0,
           ),),
         ),

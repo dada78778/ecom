@@ -16,32 +16,32 @@ class OrderSuccessPage extends StatelessWidget {
         elevation: 0.0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(10),
-        physics: BouncingScrollPhysics(),
+        padding: const EdgeInsets.all(10),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: [
             Align(child: Image.asset("assets/images/successorder.png")),
-            Text('Your Order was Successfull!',style: TextStyle(
+            const Text('Your Order was Successfull!',style: TextStyle(
               color: Color(0xff5147a6),fontSize: 20.0,fontWeight: FontWeight.bold,
             ),),
             SizedBox(height: height * .03,),
             InkWell(
               onTap: (){
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (c)=>DashboardPage()));
+                  MaterialPageRoute(builder: (c)=>const DashboardPage()));
               },
               child: Container(
                 width: width,
                 alignment: Alignment.center,
                 height: height * .06,
                 decoration: BoxDecoration(
-                  color: Color(0xff5147a6),
+                  color: const Color(0xff5147a6),
                   borderRadius: BorderRadius.circular(53),
                 ),
-                  child: Text('Back To Home',style: TextStyle(
+                  child: const Text('Back To Home',style: TextStyle(
                    color: Colors.white,fontSize: 18.0,fontWeight: FontWeight.bold,
                   ))),
             ),

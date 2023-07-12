@@ -32,21 +32,21 @@ class _PaymentPageState extends State<PaymentPage> {
         backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
-        padding: EdgeInsets.all(10),
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
-            Divider(),
+            const Divider(),
             Container(
               alignment: Alignment.centerLeft,
-              child: Text("All Methods here...",style: TextStyle(
+              child: const Text("All Methods here...",style: TextStyle(
                fontSize: 14.0,color: Color(0xff5147a6),fontWeight: FontWeight.bold,
               )),
             ),
-            Divider(),
+            const Divider(),
             SizedBox(height: height * .02),
             Container(
-              padding: EdgeInsets.all(6),
+              padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(14),
@@ -68,13 +68,13 @@ class _PaymentPageState extends State<PaymentPage> {
                       child: Radio(
                           value: 1,
                           groupValue: _value,
-                          activeColor: Color(0xff5147a6),
+                          activeColor: const Color(0xff5147a6),
                           onChanged: (value){
                                 setState(() {
                                   _value=value!;
                                 });
                           })),
-                  Expanded(
+                  const Expanded(
                     flex: 2,
                       child: Text("UPI",style: TextStyle(
                         color: Color(0xff5147a6),fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
             SizedBox(height: height * .03),
             Container(
-              padding: EdgeInsets.all(6),
+              padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(14),
@@ -127,13 +127,13 @@ class _PaymentPageState extends State<PaymentPage> {
                       child: Radio(
                           value: 2,
                           groupValue: _value,
-                          activeColor: Color(0xff5147a6),
+                          activeColor: const Color(0xff5147a6),
                           onChanged: (value){
                             setState(() {
                               _value=value!;
                             });
                           })),
-                  Expanded(
+                  const Expanded(
                       flex: 2,
                       child: Text("Net Banking",style: TextStyle(
                         color: Color(0xff5147a6),fontWeight: FontWeight.bold,
@@ -168,7 +168,7 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
             SizedBox(height: height * .03),
             Container(
-              padding: EdgeInsets.all(6),
+              padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(14),
@@ -190,13 +190,13 @@ class _PaymentPageState extends State<PaymentPage> {
                       child: Radio(
                           value: 3,
                           groupValue: _value,
-                          activeColor: Color(0xff5147a6),
+                          activeColor: const Color(0xff5147a6),
                           onChanged: (value){
                             setState(() {
                               _value=value!;
                             });
                           })),
-                  Expanded(
+                  const Expanded(
                       flex: 3,
                       child: Text("Credit card / Debit Card",style: TextStyle(
                         color: Color(0xff5147a6),fontWeight: FontWeight.bold,
@@ -207,7 +207,7 @@ class _PaymentPageState extends State<PaymentPage> {
             ),
             SizedBox(height: height * .03),
             Container(
-              padding: EdgeInsets.all(6),
+              padding: const EdgeInsets.all(6),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(14),
@@ -229,13 +229,13 @@ class _PaymentPageState extends State<PaymentPage> {
                       child: Radio(
                           value: 4,
                           groupValue: _value,
-                          activeColor: Color(0xff5147a6),
+                          activeColor: const Color(0xff5147a6),
                           onChanged: (value){
                             setState(() {
                               _value=value!;
                             });
                           })),
-                  Expanded(
+                  const Expanded(
                       flex: 3,
                       child: Text("Cash On Delivery",style: TextStyle(
                         color: Color(0xff5147a6),fontWeight: FontWeight.bold,
@@ -248,16 +248,16 @@ class _PaymentPageState extends State<PaymentPage> {
             InkWell(
               onTap: (){
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (c)=>OrderSuccessPage())
+                  MaterialPageRoute(builder: (c)=>const OrderSuccessPage())
                 );
               },
               child: Container(
                 width: width,
                 height: height * .06,
                 alignment: Alignment.center,
-                padding: EdgeInsets.all(6),
+                padding: const EdgeInsets.all(6),
                 decoration: BoxDecoration(
-                    color: Color(0xff5147a6),
+                    color: const Color(0xff5147a6),
                     borderRadius: BorderRadius.circular(14),
                     boxShadow: [
                       BoxShadow(
@@ -267,7 +267,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       )
                     ]
                 ),
-                child: Text('Pay',style: TextStyle(
+                child: const Text('Pay',style: TextStyle(
                   color: Colors.white,fontSize: 20.0,fontWeight: FontWeight.bold,
                 )),
               ),

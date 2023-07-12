@@ -276,9 +276,9 @@ class _CartPageState extends State<CartPage> {
                 },
                 child: Row(
                   children: [
-                    Icon(Icons.add_circle_outline_rounded,color: Color(0xff0433BD)),
+                    const Icon(Icons.add_circle_outline_rounded,color: Color(0xff0433BD)),
                     SizedBox(width: width * .02),
-                    Text('Add Coupon Code',style: TextStyle(
+                    const Text('Add Coupon Code',style: TextStyle(
                       color: Color(0xff0433BD),fontSize: 16.0,fontWeight: FontWeight.bold,
                     ),),
                   ],
@@ -288,7 +288,7 @@ class _CartPageState extends State<CartPage> {
               Visibility(
                 visible: _visivledata,
                   child: Container(
-                    padding: EdgeInsets.all(6),
+                    padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(13),
@@ -300,7 +300,7 @@ class _CartPageState extends State<CartPage> {
                         Expanded(
                           flex: 3,
                             child: TextFormField(
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                 border: InputBorder.none,
                                 hintText: "Coupon Code...",
                               ),
@@ -311,10 +311,10 @@ class _CartPageState extends State<CartPage> {
                               alignment: Alignment.center,
                               height: height * .04,
                               decoration: BoxDecoration(
-                                color: Color(0xff0dc143),
+                                color: const Color(0xff0dc143),
                                 borderRadius: BorderRadius.circular(13),
                               ),
-                                child: Text('Apply',textAlign: TextAlign.center,style: TextStyle(
+                                child: const Text('Apply',textAlign: TextAlign.center,style: TextStyle(
                                   color: Colors.white,fontWeight: FontWeight.bold,
                                 ),))),
                       ],
@@ -345,15 +345,15 @@ class _CartPageState extends State<CartPage> {
         child: Column(
           children: [
             SizedBox(height: height * .01),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
-                const Text("Total: ",style: TextStyle(
+                Text("Total: ",style: TextStyle(
                   color: Color(0xff5147a6), fontSize: 18.0,fontWeight: FontWeight.bold,
                 )),
-                const Text("\$ 120",style: TextStyle(
+                Text("\$ 120",style: TextStyle(
                   color: Color(0xff5147a6), fontSize: 18.0,fontWeight: FontWeight.bold,
                 )),
               ],
@@ -362,18 +362,18 @@ class _CartPageState extends State<CartPage> {
             InkWell(
               onTap: (){
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (c)=>CheckOutPage()),
+                  MaterialPageRoute(builder: (c)=>const CheckOutPage()),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 alignment: Alignment.center,
                 width: width * .9,
                 decoration: BoxDecoration(
-                  color: Color(0xff5147a6),
+                  color: const Color(0xff5147a6),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Text("Check Out",style: TextStyle(
+                child: const Text("Check Out",style: TextStyle(
                   color: Colors.white,fontWeight: FontWeight.bold,fontSize: 15.0,
                 ),),
               ),
