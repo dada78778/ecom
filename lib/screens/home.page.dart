@@ -127,7 +127,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       onPressed:(){
                         getImageGallery();
                       },
-                      color: Colors.black, icon: Icon(Icons.camera_alt),),
+                      color: Colors.black, icon: const Icon(Icons.camera_alt),),
                   ],
                 ),
               ),
