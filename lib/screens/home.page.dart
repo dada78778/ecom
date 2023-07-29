@@ -1,7 +1,9 @@
+import 'dart:io';
 import 'package:ecomapp/screens/cart.page.dart';
 import 'package:ecomapp/screens/product.info.dart';
 import 'package:ecomapp/screens/wish.list.page.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -15,6 +17,19 @@ class _DashboardPageState extends State<DashboardPage> {
   bool pressed2 = true;
   bool pressed3 = true;
   bool pressed4 = true;
+
+  File? _image;
+
+  void getImageGallery() async{
+    var image= await ImagePicker().pickImage(source: ImageSource.camera);
+
+    if(image==null) return;
+    final imgTemp= File(image.path);
+    setState(() {
+      _image=imgTemp;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final width= MediaQuery.of(context).size.width;
@@ -108,7 +123,11 @@ class _DashboardPageState extends State<DashboardPage> {
                         hintText: "Search here..."
                       ),
                     )),
-                    const Icon(Icons.camera_alt,color: Colors.black,),
+                     IconButton(
+                      onPressed:(){
+                        getImageGallery();
+                      },
+                      color: Colors.black, icon: Icon(Icons.camera_alt),),
                   ],
                 ),
               ),
@@ -154,7 +173,7 @@ class _DashboardPageState extends State<DashboardPage> {
               SingleChildScrollView(
                 child: GridView.count(
                     crossAxisCount: 2,
-                  childAspectRatio: 1/1.5,
+                  childAspectRatio: 1/1.66,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,
                   shrinkWrap: true,

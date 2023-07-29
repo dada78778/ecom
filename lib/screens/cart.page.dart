@@ -101,7 +101,7 @@ class _CartPageState extends State<CartPage> {
                                         const Text('\$ 55.00',style: TextStyle(
                                           color: Color(0xff5147a6),fontSize: 14.0,fontWeight: FontWeight.bold,
                                         )),
-                                        SizedBox(width: width * .15,),
+                                        SizedBox(width: width * .08,),
                                         Expanded(child: Row(
                                           children: [
                                             CupertinoButton(
@@ -210,7 +210,7 @@ class _CartPageState extends State<CartPage> {
                                         const Text('\$ 55.00',style: TextStyle(
                                           color: Color(0xff5147a6),fontSize: 14.0,fontWeight: FontWeight.bold,
                                         )),
-                                        SizedBox(width: width * .15,),
+                                        SizedBox(width: width * .08,),
                                         Expanded(child: Row(
                                           children: [
                                             CupertinoButton(
@@ -362,7 +362,7 @@ class _CartPageState extends State<CartPage> {
                 )),
               ],
             ),
-            SizedBox(height: height * .014),
+            SizedBox(height: height * .01),
             InkWell(
               onTap: (){
                 Navigator.of(context).push(
@@ -370,7 +370,7 @@ class _CartPageState extends State<CartPage> {
                 );
               },
               child: Container(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(5),
                 alignment: Alignment.center,
                 width: width * .9,
                 decoration: BoxDecoration(

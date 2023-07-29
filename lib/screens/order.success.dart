@@ -1,4 +1,4 @@
-import 'package:ecomapp/screens/dashboard.page.dart';
+import 'package:ecomapp/screens/home.page.dart';
 import 'package:flutter/material.dart';
 
 class OrderSuccessPage extends StatelessWidget {

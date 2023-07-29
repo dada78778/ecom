@@ -38,7 +38,7 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             SizedBox(
               width: width,
-              child: Image.asset("assets/images/signup.png"),
+              child: Image.asset("assets/images/signup.png",scale: 1,),
             ),
             Container(
               alignment: Alignment.centerLeft,
@@ -46,7 +46,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.bold,
               ),),
             ),
-            SizedBox(height: height * .03),
+            SizedBox(height: height * .02),
             Container(
                 decoration: BoxDecoration(
                     color: Colors.white,
